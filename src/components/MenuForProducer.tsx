@@ -1,12 +1,14 @@
-import ProducerDetails from "./ProducerDetails"
+import React from "react"
+import {NavLink} from "react-router"
+import {ProducerDetails} from "./ProducerDetails"
 import { ProducersFunctions } from "./ProducersFunctions"
 
-export const MenuForProducer = (p: ProducerDetails) => {
+export const MenuForProducer = () => {
     return (
         <div>
-            <button onSubmit={ProducersFunctions(p)}>for add producer</button>
-            <button onSubmit={ProducersFunctions}>for exist producer</button>
-
+            <NavLink to="/">ראשי</NavLink>
+            <NavLink to="/AddProducer">הוספת מפיקה</NavLink>
+            <NavLink to="/ProducerDetails.context">מפיקה קיימת</NavLink>
 
             {/* נכנסים לעמוד ששם ניתן לראות את פרטי המפיקה עם אופציה לשינוי
 ומופיעים רשימת הארועים עם אופציה להוספה / מחיקה 

@@ -1,19 +1,14 @@
 import { useState } from "react";
-import ProducerDetails from "./ProducerDetails"
-import contact from "./ProducerDetails"
+import {producerList} from "./ProducerDetails"
 
-export const ProducersFunctions = (p: ProducerDetails) => {
-    const [producers, setProducers] = useState<ProducerDetails[]>([]);
-
-    const addProducer = (producer: ProducerDetails) => {
-        setProducers([...producers, producer]);
-    }
+export const ProducersFunctions = (p: producerList) => {
+    const [producers, setProducers] = useState<producerList[]>([]);
 
     const deleteProducer = (name: string) => {
         setProducers(producers.filter(p => p.name!==name))
     }
 
-    const updateProducer = (name: string, contact: contact) => {
+    const updateProducer = (name: string, ) => {
         let i=producers.findIndex(p=>p.name=name);
         producers[i].contactDetails.address=contact.contactDetails.address;
         producers[i].contactDetails.phone=contact.contactDetails.phone;
