@@ -16,7 +16,7 @@ export const ToCreateProvider = (props: any) => {
 
     const [producers, setProducers] = //קריאת שרת במקום ההמשך...
     useState<Producer[]>([{
-        name: 'Bati',
+        name: '',
         email: '',
         address: '',
         phone: 0

@@ -11,7 +11,7 @@ export const ProducerLogin = () => {
     }
     let result = returnDetailsAndList();
     return <div>
-        <NavLink to="/">ראשי  </NavLink><br />
+        <NavLink to="/"> ראשי </NavLink><br />
         <label>הכנס מייל</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
         <button onSubmit={ProducerDetails=(result)}>שלח</button>

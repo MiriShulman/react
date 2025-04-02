@@ -1,9 +1,10 @@
 // interface contact {phone: string, email: string, address: string }
 
 // interface ProducerDetails {name: string, contactDetails: contact}
-
+//העברת מייל בURL
 import React, { useState } from "react"
 import {NavLink} from "react-router"
+import { EventListForProducer } from "./EventListForUsers";
 export const ProducerDetails = () => {
     // const [name, setName] = useState('');
     // const [phone, setPhone] = useState('');
@@ -22,5 +23,7 @@ export const ProducerDetails = () => {
         <label></label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
         <button onClick={returnDetailsAndList}>שלח</button>
+        <EventListForProducer=(email)></EventListForProducer>
+        //כפתור להוספת אירוע
     </div>
 }
