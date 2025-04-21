@@ -1,6 +1,3 @@
-// export const EventDetailsForProducer = () => {
-
-// }
 import React from 'react';
 
 const EventDetailsForProducer: React.FC = () => {
